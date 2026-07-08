@@ -9,9 +9,9 @@ receive no update until the field changes.
 
 ## [Unreleased]
 
-## [0.1.0] — 2026-07-08
+## [1.0.0] — 2026-07-08
 
-Initial release.
+Initial public release.
 
 ### Added
 
@@ -24,7 +24,7 @@ Initial release.
 - `find-green-levers` skill — Pareto-based lever discovery before optimizing.
 - `green-reviewer` agent — read-only audit of a diff/project against the 7 principles with
   impact-ranked, fix-routed findings.
-- Plugin manifest, README, and developer guide (CLAUDE.md).
+- Plugin manifest, README (with example use cases), and developer guide (CLAUDE.md).
 
-[Unreleased]: https://github.com/drnoa/greenit_agentic_plugin/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/drnoa/greenit_agentic_plugin/releases/tag/v0.1.0
+[Unreleased]: https://github.com/drnoa/greenit_agentic_plugin/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/drnoa/greenit_agentic_plugin/releases/tag/v1.0.0
