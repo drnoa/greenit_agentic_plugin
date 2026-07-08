@@ -35,6 +35,30 @@ anti-patterns, quick wins, tools, and before/after measurement via `calculate-sc
   principles and reports impact-ranked findings, each routed to its fix skill. Ask for a
   "green review" / "Green IT audit", or @-mention it.
 
+## Example use cases
+
+- **Estimate a service's carbon footprint** — "What's the SCI of this API?" → `calculate-sci` sets a
+  system boundary and functional unit, gathers/estimates energy, grid intensity, and embodied carbon,
+  and reports gCO₂eq per 1000 requests with a confidence level.
+- **Decide where to start** — "Where should I optimize this project for energy?" → `find-green-levers`
+  surfaces the biggest structural levers (24/7 idle environments, carbon-heavy region, high-volume
+  queries, oversized instances) and ranks them by impact before anyone touches code.
+- **Get the right pattern while coding, automatically** — editing image assets or a JS bundle surfaces
+  `reduce-data-transfer` (AVIF + `srcset`, tree-shaking, page-weight budgets); adding a cron/batch job
+  surfaces `carbon-aware-scheduling` (shift to a greener region/time); writing an ORM query flags an
+  N+1 or `SELECT *`.
+- **Review a change for energy/carbon regressions** — "Run a Green IT audit on my diff" → the
+  `green-reviewer` agent reports impact-ranked findings (`path:line — principle — problem — fix`), each
+  routed to the skill that fixes it.
+- **Cut mobile battery drain** — building a dark mode or UI animations surfaces
+  `hardware-aware-optimization` (true-black `#000000` on OLED, animate only `transform`/`opacity`).
+- **Lower infrastructure emissions without code changes** — choosing a cloud region or instance type
+  surfaces `carbon-aware-scheduling` (region grid mix), `hardware-aware-optimization` (ARM/Graviton),
+  and `optimize-resource-usage` (right-sizing, scale-to-zero, autoscaling).
+- **Keep older hardware viable** — setting performance budgets or picking dependency versions surfaces
+  `extend-longevity` (Lighthouse CI budgets, LTS stacks, slim images) to avoid software-induced
+  hardware obsolescence and its embodied carbon.
+
 ## Install
 
 Once published to a marketplace:
