@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>greenit — Green IT patterns for Claude Code</title>
+<meta name="description" content="A Claude Code plugin that makes Green IT patterns the default path in software development: 7 technical principles, SCI measurement, and a green-review agent.">
+<style>
+  :root {
+    --bg: #f7f9f7; --card: #ffffff; --fg: #16211a; --muted: #5c6b60;
+    --border: #e0e6e1; --accent: #1f8a4c; --accent-fg: #ffffff; --code-bg: #eef2ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1411; --card: #16201a; --fg: #e6efe8; --muted: #9db0a3;
+      --border: #26332b; --accent: #35c46f; --accent-fg: #06110a; --code-bg: #101a14;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 72px 0 40px; text-align: center; }
+  .badge {
+    display: inline-block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--border); border-radius: 999px; padding: 4px 14px;
+    background: var(--card);
+  }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 20px 0 8px; letter-spacing: -.02em; }
+  h1 .leaf { color: var(--accent); }
+  .tagline { font-size: 1.2rem; color: var(--muted); max-width: 620px; margin: 0 auto 28px; }
+  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border-radius: 8px; font-weight: 600;
+    background: var(--accent); color: var(--accent-fg); border: 1px solid transparent;
+  }
+  .btn:hover { text-decoration: none; opacity: .92; }
+  .btn.secondary { background: transparent; color: var(--fg); border-color: var(--border); }
+  section { padding: 34px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 1.5rem; margin: 0 0 18px; letter-spacing: -.01em; }
+  p.lead { color: var(--muted); margin-top: -6px; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: 14px;
+  }
+  :not(pre) > code { background: var(--code-bg); padding: 1px 6px; border-radius: 5px; font-size: .9em; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px;
+  }
+  .card h3 { margin: 0 0 4px; font-size: 1rem; }
+  .card h3 code { background: none; padding: 0; color: var(--accent); font-size: 1em; }
+  .card p { margin: 0; color: var(--muted); font-size: .92rem; }
+  ul.uses { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  ul.uses li { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; }
+  ul.uses b { color: var(--fg); }
+  footer { padding: 40px 0 64px; text-align: center; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); }
+  footer a { margin: 0 8px; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <span class="badge">Claude Code plugin</span>
+  <h1><span class="leaf">green</span>it</h1>
+  <p class="tagline">Make Green IT patterns the default, low-friction path in software development —
+    energy-, carbon-, and resource-efficient design, implementation, and review.</p>
+  <div class="cta">
+    <a class="btn" href="https://github.com/drnoa/greenit_agentic_plugin">View on GitHub</a>
+    <a class="btn secondary" href="#install">Install</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>What it does</h2>
+    <p class="lead">Encodes the <b>7 technical Green IT principles</b> plus Software Carbon Intensity
+      measurement and impact-focus as model-invoked skills. Claude applies the right pattern
+      automatically when your task matches — and a read-only agent audits a diff or project against
+      all of them.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3><code>calculate-sci</code></h3><p>Software Carbon Intensity <code>SCI = (E×I+M)/R</code> (ISO/IEC 21031:2024) for your project.</p></div>
+      <div class="card"><h3><code>find-green-levers</code></h3><p>Find the highest-impact levers before optimizing (Pareto).</p></div>
+      <div class="card"><h3><code>minimize-footprint</code></h3><p>Less is more — don't build, store, or run what isn't needed.</p></div>
+      <div class="card"><h3><code>reduce-data-transfer</code></h3><p>Network efficiency — cut transferred and stored bytes.</p></div>
+      <div class="card"><h3><code>efficient-compute</code></h3><p>Algorithmic efficiency — minimize and avoid computation.</p></div>
+      <div class="card"><h3><code>optimize-resource-usage</code></h3><p>Hardware efficiency — maximize utilization, kill idle draw.</p></div>
+      <div class="card"><h3><code>carbon-aware-scheduling</code></h3><p>Carbon awareness — shift workloads to greener regions/times.</p></div>
+      <div class="card"><h3><code>hardware-aware-optimization</code></h3><p>Exploit hardware: OLED, ARM/Graviton, crypto units, PUE.</p></div>
+      <div class="card"><h3><code>extend-longevity</code></h3><p>Extend device &amp; software lifetime to cut embodied carbon.</p></div>
+      <div class="card"><h3><code>green-reviewer</code> <span style="color:var(--muted);font-weight:400">agent</span></h3><p>Read-only audit against the 7 principles; impact-ranked findings routed to a fix skill.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Example use cases</h2>
+    <ul class="uses">
+      <li><b>Estimate a service's carbon footprint</b> — “What's the SCI of this API?” → gCO₂eq per 1000 requests with a confidence level.</li>
+      <li><b>Decide where to start</b> — “Where should I optimize this project for energy?” → biggest structural levers, ranked by impact.</li>
+      <li><b>The right pattern while coding, automatically</b> — editing images surfaces network efficiency; adding a cron job surfaces carbon-aware scheduling; an ORM query flags N+1.</li>
+      <li><b>Review a change</b> — “Run a Green IT audit on my diff” → <code>path:line — principle — problem — fix</code>.</li>
+      <li><b>Cut mobile battery drain</b> — dark mode / animations surface true-black OLED and <code>transform</code>/<code>opacity</code> guidance.</li>
+      <li><b>Lower infra emissions without code changes</b> — region choice, ARM instances, right-sizing, scale-to-zero.</li>
+    </ul>
+  </section>
+
+  <section id="install">
+    <h2>Install</h2>
+    <p class="lead">Once published to the community marketplace:</p>
+    <pre>/plugin marketplace add anthropics/claude-plugins-community
+/plugin install greenit@claude-community</pre>
+    <p class="lead">Try it locally without installing:</p>
+    <pre>git clone https://github.com/drnoa/greenit_agentic_plugin.git
+claude --plugin-dir ./greenit_agentic_plugin</pre>
+  </section>
+</main>
+
+<footer class="wrap">
+  <a href="https://github.com/drnoa/greenit_agentic_plugin">GitHub</a>·
+  <a href="https://github.com/drnoa/greenit_agentic_plugin/blob/main/PRIVACY.md">Privacy</a>·
+  <a href="https://github.com/drnoa/greenit_agentic_plugin/blob/main/CHANGELOG.md">Changelog</a>·
+  <a href="https://github.com/drnoa/greenit_agentic_plugin/blob/main/LICENSE">GPL-3.0</a>
+  <p>Green IT patterns for Claude Code · v1.0.0</p>
+</footer>
+</body>
+</html>
