@@ -97,6 +97,11 @@ claude plugin validate .     # validate before commit / submission
 After edits, run `/reload-plugins` in-session. See [CLAUDE.md](CLAUDE.md) for authoring conventions
 and [CHANGELOG.md](CHANGELOG.md) for release history.
 
+## Privacy
+
+The plugin collects no data, has no telemetry, and makes no network calls of its own. See
+[PRIVACY.md](PRIVACY.md).
+
 ## License
 
 [GPL-3.0](LICENSE).
