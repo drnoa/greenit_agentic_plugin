@@ -61,19 +61,19 @@ anti-patterns, quick wins, tools, and before/after measurement via `calculate-sc
 
 ## Install
 
-Once published to a marketplace:
-
-```
-/plugin marketplace add anthropics/claude-plugins-community
-/plugin install greenit@claude-community
-```
-
 Try it locally without installing:
 
 ```bash
 git clone https://github.com/drnoa/greenit_agentic_plugin.git
 claude --plugin-dir ./greenit_agentic_plugin
 ```
+
+Once published to a marketplace:
+
+```
+Not yet published in a marketplace!
+```
+
 
 ## Usage
 
