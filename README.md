@@ -61,43 +61,19 @@ anti-patterns, quick wins, tools, and before/after measurement via `calculate-sc
 
 ## Install
 
-### Claude Code — from this repository's marketplace
-
-This repository is its own plugin marketplace (`greenit-plugins`). Add it once, then install:
-
-```bash
-claude plugin marketplace add drnoa/greenit_agentic_plugin
-claude plugin install greenit@greenit-plugins
-```
-
-Or in one step (Claude Code 2.1.292 or later):
-
-```bash
-claude plugin install greenit --marketplace drnoa/greenit_agentic_plugin
-```
-
-Inside a session the same works as `/plugin marketplace add drnoa/greenit_agentic_plugin` and
-`/plugin install greenit@greenit-plugins`. Machines without a GitHub SSH key should set
-`CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1` so the clone runs over HTTPS.
-
-Update to a new release:
-
-```bash
-claude plugin update greenit@greenit-plugins
-```
-
-### claude.ai, Cowork, and Claude Code — from the Anthropic plugin directory
-
-Once listed in [Anthropic's plugin directory](https://claude.ai/directory), open
-**Customize → Plugins → Discover** on claude.ai and add **Green IT**. A plugin added there also loads
-in your Claude Code sessions as a synced plugin, or browse it with `/plugin directory` in Claude Code.
-
-### Try it without installing
+Try it locally without installing:
 
 ```bash
 git clone https://github.com/drnoa/greenit_agentic_plugin.git
 claude --plugin-dir ./greenit_agentic_plugin
 ```
+
+Once published to a marketplace:
+
+```
+Not yet published in a marketplace!
+```
+
 
 ## Usage
 
