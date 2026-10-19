@@ -114,9 +114,17 @@
 
   <section id="install">
     <h2>Install</h2>
-    <p class="lead">Once published to the community marketplace:</p>
-    <pre>/plugin marketplace add anthropics/claude-plugins-community
-/plugin install greenit@claude-community</pre>
+    <p class="lead">Claude Code — this repository is its own marketplace (<code>greenit-plugins</code>). Add it once, then install:</p>
+    <pre>claude plugin marketplace add drnoa/greenit_agentic_plugin
+claude plugin install greenit@greenit-plugins</pre>
+    <p class="lead">Or in one step (Claude Code 2.1.292 or later):</p>
+    <pre>claude plugin install greenit --marketplace drnoa/greenit_agentic_plugin</pre>
+    <p class="lead">Inside a session the same works as <code>/plugin marketplace add …</code> and <code>/plugin install greenit@greenit-plugins</code>.
+      Update later with <code>claude plugin update greenit@greenit-plugins</code>. Machines without a GitHub SSH key should set
+      <code>CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1</code>.</p>
+    <p class="lead">claude.ai, Cowork, and Claude Code — once listed in <a href="https://claude.ai/directory">Anthropic's plugin directory</a>, open
+      <b>Customize → Plugins → Discover</b> and add <b>Green IT</b>. A plugin added there also loads in Claude Code as a synced plugin.
+      Skills load on every surface; the <code>green-reviewer</code> agent loads in Claude Code and Cowork only.</p>
     <p class="lead">Try it locally without installing:</p>
     <pre>git clone https://github.com/drnoa/greenit_agentic_plugin.git
 claude --plugin-dir ./greenit_agentic_plugin</pre>
@@ -128,7 +136,7 @@ claude --plugin-dir ./greenit_agentic_plugin</pre>
   <a href="https://github.com/drnoa/greenit_agentic_plugin/blob/main/PRIVACY.md">Privacy</a>·
   <a href="https://github.com/drnoa/greenit_agentic_plugin/blob/main/CHANGELOG.md">Changelog</a>·
   <a href="https://github.com/drnoa/greenit_agentic_plugin/blob/main/LICENSE">GPL-3.0</a>
-  <p>Green IT patterns for Claude Code · v1.0.0</p>
+  <p>Green IT patterns for Claude Code · v1.1.0</p>
 </footer>
 </body>
 </html>
