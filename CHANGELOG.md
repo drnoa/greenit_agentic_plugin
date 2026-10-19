@@ -9,6 +9,30 @@ receive no update until the field changes.
 
 ## [Unreleased]
 
+## [1.1.0] — 2026-10-19
+
+Distribution release: the repository is now installable as its own marketplace and prepared for
+submission to the Anthropic plugin directory. No change to skill or agent behavior.
+
+### Added
+
+- `.claude-plugin/marketplace.json` — the repository is its own marketplace (`greenit-plugins`).
+  Install with `claude plugin marketplace add drnoa/greenit_agentic_plugin` and
+  `claude plugin install greenit@greenit-plugins`.
+- Directory listing metadata in `plugin.json`: `displayName`, `author.url`, `icon`,
+  `documentationUrl`, `supportUrl`, `privacyPolicyUrl`.
+- `assets/icon.svg` plugin icon.
+- GitHub Actions workflow running `claude plugin validate --strict .` on every push and pull request.
+- README sections: marketplace and directory install paths, platform support table, and a
+  "what the plugin runs, sends, and fetches" disclosure for the directory security scan.
+- `.gitignore` for OS artifacts the directory validator rejects and local Claude Code settings.
+
+### Changed
+
+- Developer guide moved from `CLAUDE.md` to `.claude/CLAUDE.md` so `claude plugin validate --strict`
+  passes without warnings (a plugin-root `CLAUDE.md` is never shipped as plugin context). Claude Code
+  still loads it as project memory. Guide updated with the release and submission process.
+
 ## [1.0.0] — 2026-07-08
 
 Initial public release.
@@ -26,5 +50,6 @@ Initial public release.
   impact-ranked, fix-routed findings.
 - Plugin manifest, README (with example use cases), and developer guide (CLAUDE.md).
 
-[Unreleased]: https://github.com/drnoa/greenit_agentic_plugin/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/drnoa/greenit_agentic_plugin/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/drnoa/greenit_agentic_plugin/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/drnoa/greenit_agentic_plugin/releases/tag/v1.0.0

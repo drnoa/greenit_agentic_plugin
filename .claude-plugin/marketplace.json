@@ -1,0 +1,17 @@
+{
+  "name": "greenit-plugins",
+  "description": "Green IT plugins for Claude Code: energy-, carbon-, and resource-efficient software design, implementation, and review.",
+  "owner": {
+    "name": "Daniel Binggeli",
+    "url": "https://github.com/drnoa"
+  },
+  "plugins": [
+    {
+      "name": "greenit",
+      "source": "./",
+      "description": "Skills and a review agent for consistently applying Green IT patterns in software development, including Software Carbon Intensity (SCI) measurement.",
+      "category": "development",
+      "tags": ["green-it", "sustainability", "carbon", "energy-efficiency", "code-review"]
+    }
+  ]
+}

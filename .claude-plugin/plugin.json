@@ -1,9 +1,11 @@
 {
   "name": "greenit",
-  "description": "Skills and agents for consistently applying Green IT patterns in software development, including Software Carbon Intensity (SCI) measurement.",
-  "version": "1.0.0",
+  "displayName": "Green IT",
+  "description": "Skills and a review agent for consistently applying Green IT patterns in software development, including Software Carbon Intensity (SCI) measurement.",
+  "version": "1.1.0",
   "author": {
-    "name": "Daniel Binggeli"
+    "name": "Daniel Binggeli",
+    "url": "https://github.com/drnoa"
   },
   "keywords": [
     "green-it",
@@ -13,7 +15,11 @@
     "software-carbon-intensity",
     "code-review"
   ],
-  "homepage": "https://github.com/drnoa/greenit_agentic_plugin",
+  "homepage": "https://drnoa.github.io/greenit_agentic_plugin/",
   "repository": "https://github.com/drnoa/greenit_agentic_plugin",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "icon": "./assets/icon.svg",
+  "documentationUrl": "https://github.com/drnoa/greenit_agentic_plugin#readme",
+  "supportUrl": "https://github.com/drnoa/greenit_agentic_plugin/issues",
+  "privacyPolicyUrl": "https://github.com/drnoa/greenit_agentic_plugin/blob/main/PRIVACY.md"
 }

@@ -1,0 +1,33 @@
+{
+  "name": "greenit_agentic_plugin – Claude-Plugin",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "remoteUser": "vscode",
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code || true",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "DavidAnson.vscode-markdownlint",
+        "bierner.markdown-mermaid",
+        "yzhang.markdown-all-in-one",
+        "esbenp.prettier-vscode",
+        "redhat.vscode-yaml",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "anthropic.claude-code"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.wordWrap": "on",
+        "[markdown]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# OS artifacts (the plugin directory validator rejects these)
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+
+# Local Claude Code session settings (never part of the plugin)
+.claude/settings.json
+.claude/settings.local.json
