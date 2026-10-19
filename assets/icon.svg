@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Green IT plugin icon">
+  <rect width="128" height="128" rx="24" fill="#0f3d2e"/>
+  <path d="M92 32C60 32 38 50 36 88c14-26 32-38 56-40-20 12-34 26-42 48 32-2 50-22 50-56 0-3-1-6-2-8z" fill="#7ed957"/>
+  <path d="M36 88c10-20 26-34 48-42" fill="none" stroke="#0f3d2e" stroke-width="3" stroke-linecap="round"/>
+</svg>

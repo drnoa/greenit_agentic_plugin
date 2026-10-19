@@ -1,6 +1,6 @@
 # Privacy Policy — greenit plugin
 
-_Last updated: 2026-07-08_
+_Last updated: 2026-10-19_
 
 This privacy policy covers the **`greenit`** plugin for Claude Code (the "Plugin"), distributed at
 https://github.com/drnoa/greenit_agentic_plugin.
@@ -13,9 +13,9 @@ advertising, and it transmits nothing to the author or to any third party.
 ## What the Plugin is
 
 The Plugin consists solely of static Markdown files — skills (`skills/<name>/SKILL.md`) and one
-read-only reviewer agent (`agents/green-reviewer.md`). These are instructions that run inside your
-local Claude Code session. The Plugin ships no executable code, no hooks, no MCP servers, and no
-background processes.
+read-only reviewer agent (`agents/green-reviewer.md`) — plus an SVG icon. These are instructions
+that run inside your local Claude Code session. The Plugin ships no executable code, no hooks, no MCP
+servers, and no background processes.
 
 ## Data collection
 

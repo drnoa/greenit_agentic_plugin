@@ -61,14 +61,38 @@ anti-patterns, quick wins, tools, and before/after measurement via `calculate-sc
 
 ## Install
 
-Once published to a marketplace:
+### Claude Code — from this repository's marketplace
 
-```
-/plugin marketplace add anthropics/claude-plugins-community
-/plugin install greenit@claude-community
+This repository is its own plugin marketplace (`greenit-plugins`). Add it once, then install:
+
+```bash
+claude plugin marketplace add drnoa/greenit_agentic_plugin
+claude plugin install greenit@greenit-plugins
 ```
 
-Try it locally without installing:
+Or in one step (Claude Code 2.1.292 or later):
+
+```bash
+claude plugin install greenit --marketplace drnoa/greenit_agentic_plugin
+```
+
+Inside a session the same works as `/plugin marketplace add drnoa/greenit_agentic_plugin` and
+`/plugin install greenit@greenit-plugins`. Machines without a GitHub SSH key should set
+`CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1` so the clone runs over HTTPS.
+
+Update to a new release:
+
+```bash
+claude plugin update greenit@greenit-plugins
+```
+
+### claude.ai, Cowork, and Claude Code — from the Anthropic plugin directory
+
+Once listed in [Anthropic's plugin directory](https://claude.ai/directory), open
+**Customize → Plugins → Discover** on claude.ai and add **Green IT**. A plugin added there also loads
+in your Claude Code sessions as a synced plugin, or browse it with `/plugin directory` in Claude Code.
+
+### Try it without installing
 
 ```bash
 git clone https://github.com/drnoa/greenit_agentic_plugin.git
@@ -77,7 +101,7 @@ claude --plugin-dir ./greenit_agentic_plugin
 
 ## Usage
 
-```
+```text
 /greenit:calculate-sci            # estimate the current project's carbon intensity
 /greenit:find-green-levers        # where should I start optimizing?
 /greenit:reduce-data-transfer     # guidance while working on assets, queries, payloads
@@ -87,15 +111,32 @@ Or just work normally — skills surface themselves (e.g. editing images → `re
 adding a cron/batch job → `carbon-aware-scheduling`). For a review, ask Claude to run a Green IT
 audit and it delegates to `green-reviewer`.
 
+## Platform support
+
+| Component | Claude Code | Cowork | claude.ai chat |
+| :-- | :-- | :-- | :-- |
+| 9 skills | ✅ | ✅ | ✅ |
+| `green-reviewer` agent | ✅ | ✅ | ignored (agents don't load in chat) |
+
+## What the plugin runs, sends, and fetches
+
+Nothing. The plugin consists only of Markdown skill and agent files plus an SVG icon. It ships no
+hooks, scripts, MCP servers, executables, or package installs, and it makes no network requests of
+its own. Skills cite public reference documentation (Green Software Foundation, Electricity Maps,
+Boavizta, web.dev, W3C, AWS) as links; nothing is fetched unless you ask Claude to open a link. The
+`green-reviewer` agent is read-only: it reads files and runs `git diff`-style inspection commands in
+your project and never edits anything.
+
 ## Development
 
 ```bash
-claude --plugin-dir .        # load the plugin (no install)
-claude plugin validate .     # validate before commit / submission
+claude --plugin-dir .                 # load the plugin (no install)
+claude plugin validate --strict .     # validate marketplace, manifest, skills, and agent
 ```
 
-After edits, run `/reload-plugins` in-session. See [CLAUDE.md](CLAUDE.md) for authoring conventions
-and [CHANGELOG.md](CHANGELOG.md) for release history.
+After edits, run `/reload-plugins` in-session. See [.claude/CLAUDE.md](.claude/CLAUDE.md) for
+authoring conventions and the release/submission process, and [CHANGELOG.md](CHANGELOG.md) for
+release history. CI runs the same strict validation on every push.
 
 ## Privacy
 
